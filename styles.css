@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f5;
+}
+
+.calculator {
+    width: 320px;
+    /* Ширина калькулятора */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    /* Збільшено висоту */
+    font-size: 40px;
+    /* Збільшено шрифт */
+    text-align: right;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    padding-right: 10px;
+    background-color: #e8e8e8;
+    /* Світліший фон для дисплея */
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    /* Збільшений проміжок між кнопками */
+}
+
+button {
+    height: 70px;
+    /* Висота кнопок */
+    font-size: 30px;
+    /* Розмір шрифту */
+    border: none;
+    border-radius: 15px;
+    /* Округлі кнопки */
+    background-color: #f0f0f5;
+    /* Світліший фон для кнопок */
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    /* Додано ефект натискання */
+}
+
+button:hover {
+    background-color: #d0d0d5;
+    /* Зміна кольору при наведенні */
+}
+
+button:active {
+    transform: scale(0.95);
+    /* Зменшення кнопки при натисканні */
+}
+
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12) {
+    background-color: #007aff;
+    /* Синій фон для операторів */
+    color: white;
+    /* Білий текст для операторів */
+}
+
+button:nth-child(3):hover,
+button:nth-child(4):hover,
+button:nth-child(8):hover,
+button:nth-child(12):hover {
+    background-color: #005bb5;
+    /* Темніший синій при наведенні */
+}
